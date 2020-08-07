@@ -65,6 +65,19 @@
         -ms-transform: translateY(-30px);
         transform: translateY(-30px); }
 
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #383838;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 6px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+
 /*Checkboxes styles*/
 input[type="checkbox"] {
   display: none; }
@@ -114,8 +127,8 @@ input[type="checkbox"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid transparent;
-  padding: 7px 30px;
+  border: none;
+  padding: 10px 30px;
   font-size: 16px;
   line-height: 1.5;
   border-radius: .25rem;
@@ -123,12 +136,12 @@ input[type="checkbox"] {
 
 .btn-primary {
   color: #fff;
-  background-color: #288feb;
+  background: linear-gradient(to right, #0062E6, #23a8ff);
   border-color: #288feb; }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
+  background: linear-gradient(to right, #0062E6, #23a8ff);
   border-color: #288feb; }
 
 .btn-primary.focus, .btn-primary:focus {
@@ -136,8 +149,26 @@ input[type="checkbox"] {
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #288feb;
+  background: linear-gradient(to right, #0062E6, #23a8ff);
   border-color: #288feb; }
+
+.btn-dark {
+  color: #fff;
+  background: linear-gradient(to right, #233141, #5d5d5d);
+  border-color: #1E1E1E; }
+
+.btn-dark:hover {
+  color: #fff;
+  background: linear-gradient(to right, #233141, #5d5d5d);
+  border-color: #1E1E1E; }
+
+.btn-dark.focus, .btn-dark:focus {
+  box-shadow: none; }
+
+.btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show > .btn-dark.dropdown-toggle {
+  color: #fff;
+  background: linear-gradient(to right, #233141, #5d5d5d);
+  border-color: #1E1E1E; }
 
 .signup-steps {
   margin: 50px 0 25px 0; }
@@ -166,21 +197,102 @@ input[type="checkbox"] {
       height: 30px;
       border-radius: 100%;
       color: #fff;
-      background-color: #0069d9;
+      background: linear-gradient(to right, #0062E6, #23a8ff);
       vertical-align: middle;
       margin-right: 5px; }
 
 .sign-up-flow {
-  box-shadow: 0px 3px 6px #00000029; }
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 75px 50px 50px 50px;
+  margin-bottom: 50px; }
   .sign-up-flow .signup-form {
     max-width: 720px;
     width: 100%;
-    margin: 0 auto 45px auto;
-    padding: 75px 50px 50px 50px; }
+    margin: 0 auto 45px auto; }
 
-.top-bar .col-12 {
-  display: flex;
-  justify-content: flex-end;
-  padding: 15px 0; }
+.price-nav-tab {
+  background-color: #ebebeb;
+  border-bottom: none;
+  text-align: center;
+  justify-content: center;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 30px; }
+  .price-nav-tab .nav-tabs .nav-item {
+    margin-bottom: -1px; }
+  .price-nav-tab .nav-link {
+    display: block;
+    padding: 12px 10px;
+    width: 135px;
+    border: none;
+    border-radius: 30px; }
+  .price-nav-tab .nav-tabs .nav-link:focus, .price-nav-tab .nav-tabs .nav-link:hover {
+    border: none transparent;
+    opacity: 0.7;
+    transition: all 0.2s; }
+  .price-nav-tab .nav-item.show .nav-link, .price-nav-tab .nav-link.active {
+    color: #fff;
+    background: linear-gradient(to right, #0062E6, #23a8ff);
+    border-color: #288feb;
+    transition: all 0.5s ease-in-out; }
+
+.pricing-section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.pricing-section .card {
+  border: none;
+  border-radius: 2px;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1); }
+
+.pricing-section hr {
+  margin: 1.5rem 0; }
+
+.pricing-section .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold; }
+
+.pricing-section .card-price {
+  font-size: 3rem;
+  margin: 0; }
+
+.pricing-section .card-price .period {
+  font-size: 0.8rem; }
+
+.pricing-section ul li {
+  margin-bottom: 1rem; }
+
+.pricing-section .text-muted {
+  opacity: 0.7; }
+
+.pricing-section .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s; }
+
+/* Hover Effects on Card */
+.congrats-img img {
+  max-width: 347px;
+  width: 100%;
+  border-radius: 100%;
+  margin: 50px 15px; }
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3); }
+
+  .pricing .card:hover .btn {
+    opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
